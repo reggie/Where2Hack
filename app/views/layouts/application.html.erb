@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WhereToHack</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<header class="navbar navbar-fixed-top navbar-inverse">
+  	<div class="navbar-inner">
+    	<div class="container">
+      	<%= link_to "Where2Hack", '/', id: "logo" %>
+     	 	<nav>
+     	 		<ul class="nav pull-right">
+						<li>
+							<form id="search" action="hackathons" method="post">
+								<input type="search" name="input" placeholder="name or abbreviation"/>
+								<button id="submit" type="submit" class="btn btn-default"><span class="icon-search"></span></button>	
+							</form>
+        		</li>
+					</ul>
+    		</nav>
+  		</div>
+		</div>
+ </header>
+	<div class="container">
+  	<%= yield %>
+		<footer class="footer">
+			<small>Reginald J Montilus</small>
+			<nav>
+				<ul>
+					<li><a href=""><span class="twitter"></span></a></li>
+					<li><a href=""><span class="gitthub"></span></a></li>
+				</ul>
+			</nav>
+		</footer>
+  </div> 
+</body>
+</html>

@@ -1,0 +1,35 @@
+// Place all the styles related to the HackathonPages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.hackathon {
+	margin: auto;
+	height: 25%;
+	width: 75%;
+	padding: 50px;
+}
+
+.image, .information {
+	float: left;
+	width:40%;
+	padding: 20px;
+}
+
+.image {
+	margin-right: 20px;
+}
+ 
+.image img {
+	height: 50%;
+ 	width: 100%;
+}
+
+.information {
+	margin-top: auto;
+	text-align: left;
+}
+
+.clear {
+	clear: both;
+}
+

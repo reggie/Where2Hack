@@ -1,0 +1,2 @@
+module HackathonPagesHelper
+end

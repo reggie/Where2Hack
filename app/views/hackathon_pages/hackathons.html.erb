@@ -1,0 +1,26 @@
+<% if !@hackathons.empty? %>	
+	<div id="hackathons" class="center">
+		<% @hackathons.reverse.each do |hackathon| %>
+			<div class="hackathon">
+				<div class="image">
+					<img src="<%= hackathon["logo"] %>"/>
+				</div>
+				<div class="information">
+					<% if hackathon["external_url"].sub("http://", "").blank? %>
+						<p><%= hackathon["name"] %></p>
+					<% else %>
+						<a href="<%= hackathon["external_url"] %>"><%= hackathon["name"] %></a>
+					<% end %>
+					<p><%= hackathon["date"] %> in <%= hackathon["location"]["city"] %>, <%= hackathon["location"]["state"] %></p>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<hr/>
+		<% end %>
+	</div>
+<% else %>
+	<div class="center hero-unit">
+		<h1>No hackathons were found.</h1>
+		<h2>This app currently only supports the US, so check the spelling of your state or check back at a later time.</h2>
+	</div>
+<% end %>
