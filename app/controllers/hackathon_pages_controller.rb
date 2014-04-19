@@ -83,6 +83,7 @@ class HackathonPagesController < ApplicationController
  		next if "complete" == key["state"]
 		date = formatDate key["start_time"], key["end_time"]
 		key["date"] = date
+		key["external_url"] = formatURL key["external_url"]
  		@hackathons << key
  		end
  	end
